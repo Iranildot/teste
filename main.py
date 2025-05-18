@@ -2,7 +2,6 @@ import flet as ft
 from components import rail
 from components import dashboard_area
 from components import menubar
-from utils import apikey_manager
 from utils import google_adk_manager
 from dashboards.prompt import prompt_controls
 
@@ -12,8 +11,6 @@ class App:
         self.page = page
         self.page.title = "AgentLab"
         self.page.theme_mode = ft.ThemeMode.DARK
-
-        apikey_manager.load_apikey()
 
         self.page.on_keyboard_event = self.handle_key_event
 
