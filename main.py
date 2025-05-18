@@ -14,12 +14,8 @@ class App:
 
         self.page.on_keyboard_event = self.handle_key_event
 
-        self.page.add(
-            ft.Row(
-                controls=[
-                    menubar.menubar,
-                ]
-            ),
+
+        self.page.controls.append(
             ft.Row(
                 [
                     rail.Control(),
@@ -33,6 +29,7 @@ class App:
                 expand=True,
             )
         )
+        self.page.update()
     
     def handle_key_event(self, event: ft.KeyboardEvent):
         if event.key == "Enter" and event.ctrl:
