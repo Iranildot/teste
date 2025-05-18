@@ -1,7 +1,6 @@
 import flet as ft
 from components import rail
 from components import dashboard_area
-from components import menubar
 from utils import google_adk_manager
 from dashboards.prompt import prompt_controls
 
