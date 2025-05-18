@@ -1,17 +1,15 @@
 import flet as ft
-from utils import apikey_manager
 import os
 
 # ABRE DIÁLOGO PARA CADASTRAR CHAVE API
 def open(page: ft.Page):
 
     def confirm():
-        apikey_manager.set_apikey(textfield.value)
         page.close(apikey_dialog)
 
     textfield = ft.TextField(
         border_color=ft.Colors.PRIMARY,
-        can_reveal_password=True,
+        can_reveal_password=False,
         hint_text="Digite sua API Key",
         prefix_icon=ft.Icons.KEY,
         password=True,
